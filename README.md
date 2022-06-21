@@ -19,7 +19,7 @@
 # DEPLOY
 
 ## ⚠️Fork The Repo And Deploy Or Unwanted Problems May Occur...
-## After Forking Before Deplying Change The link of your github [HERE](https://github.com/TechnoMindz/CommonBot_For_All/edit/master/README.md#L28) Below Shown In The Picture 👇👇👇
+## After Forking Before Deplying Change The link of your github HERE Below Shown In The Picture 👇👇👇
 <p align="center"><a href="https://t.me/technomindzchat"><img src="https://telegra.ph/file/7dfbf86b1da43cc40208f.jpg" width="800"></a></p>
 
 <details><summary>Deploy To Heroku</summary>
