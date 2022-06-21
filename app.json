@@ -32,12 +32,12 @@
         "API_ID": {
             "description": "Get this value from https://my.telegram.org",
             "required": true,
-            "value": "17050357"
+            "value": "170####"
         },
         "API_HASH": {
             "description": "Get this value from https://my.telegram.org",
             "required": true,
-            "value": "29fd19124a1f32e9150625e2357a7a2f"
+            "value": "29fd19124#################357a7a2f"
         },
         "CHANNELS": {
             "description": "Username or ID of channel or group. Separate multiple IDs by space.",
@@ -86,7 +86,7 @@
         "UPSTREAM_REPO": {
             "description": "Don't Change Or It Won't Work",
             "required": true,
-            "value": "https://github.com/TechnoMindz/CommonBot_For_All"
+            "value": "youreditedgithublink"
         },
         "DATABASE_URI": {
             "description": "mongoDB URI. Get this value from https://www.mongodb.com. For more help watch this video - https://youtu.be/dsuTn4qV2GA",
