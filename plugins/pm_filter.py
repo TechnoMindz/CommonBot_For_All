@@ -1,4 +1,4 @@
-# Kanged From @TechnoMindz Made By Ravinandan
+# Kanged From @TechnoMindz Made By Ravinandan @TechnoMindzyt
 import asyncio
 import re
 import ast
