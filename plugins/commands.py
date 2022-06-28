@@ -283,7 +283,7 @@ async def channel_info(bot, message):
 async def log_file(bot, message):
     """Send log file"""
     try:
-        await message.reply_document('TelegramBot.log')
+        await message.reply_document('TTecchnoMindzBot.log')
     except Exception as e:
         await message.reply(str(e))
 
@@ -360,7 +360,7 @@ async def delete_all_index(bot, message):
 @Client.on_callback_query(filters.regex(r'^autofilter_delete'))
 async def delete_all_index_confirm(bot, message):
     await Media.collection.drop()
-    await message.answer('What Are You Looking 🤔')
+    await message.answer('🗑️Trashed...')
     await message.message.edit('Succesfully Deleted All The Indexed Files.')
 
 
@@ -400,6 +400,7 @@ async def settings(client, message):
     ):
         return
 
+
     settings = await get_settings(grp_id)
 
     if settings is not None:
@@ -416,11 +417,11 @@ async def settings(client, message):
             ],
             [
                 InlineKeyboardButton(
-                    'Bot PM',
+                    '𝐁𝐎𝐓 𝐏𝐌',
                     callback_data=f'setgs#botpm#{settings["botpm"]}#{grp_id}',
                 ),
                 InlineKeyboardButton(
-                    '✅ Yes' if settings["botpm"] else '❌ No',
+                    '✅ 𝐘𝐄𝐒' if settings["botpm"] else '🗑️ 𝐍𝐎',
                     callback_data=f'setgs#botpm#{settings["botpm"]}#{grp_id}',
                 ),
             ],
