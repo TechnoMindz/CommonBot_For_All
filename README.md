@@ -1,6 +1,6 @@
 # <h2 align="centre"><i><b>💖TECHNO MINDZ BOT-1💝</i></b></h2>
 
-## COMMAN BOT FOR ALL MY TECHNOMINDZ SUBSCRIBERS With Pm Feature and settings Working One
+### COMMAN BOT FOR ALL MY TECHNOMINDZ SUBSCRIBERS With Pm Feature and settings Working One
 
 <p align="center"><a href="https://t.me/technomindzchat"><img src="https://telegra.ph/file/b417bdd01331179d5787c.jpg" width="500"></a></p>
 
