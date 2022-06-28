@@ -8,5 +8,5 @@ else
 fi
 cd /CommonBot_For_All
 pip3 install -U -r requirements.txt
-echo "Starting Bot, Please Wait..."
+echo "Starting Techno Mindz 🤖..."
 python3 bot.py
