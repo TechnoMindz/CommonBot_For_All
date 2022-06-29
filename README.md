@@ -9,11 +9,11 @@
 ![Typing SVG](https://readme-typing-svg.herokuapp.com/?lines=Welcome+To+Techno+Mindz!;Created+by+RAVINANDAN!;A+simple+and+a+basic+Bot!;A+Advanced+AutoFilter+Bot;Don't+Forget+To+Subcribe;Techno+Mindz+in+YouTube;)
 </p>
 </h1>
-<a href="https://www.youtube.com/c/TechnoMindz">
-  <img src="https://img.shields.io/badge/𝚂𝚄𝙱𝚂𝙲𝚁𝙸𝙱𝙴-red?logo=youtube" width="150">
 
-## IF YOU NEED ANY ASSISTANCE FEEL FREE TO CONTACT
-## YOUTUBE  [SUPPORT_CHANNEL](https://t.me/technomindzchat)
+<a href="https://www.youtube.com/c/TechnoMindz">
+  <img src="https://img.shields.io/badge/SUBSCRIBE-red?logo=youtube" width="170">
+<a href="https://youtu.be/CWObOvzp09g">
+  <img src="https://img.shields.io/badge/MongoDB-red?logo=youtube" width="150">
 
 
 # DEPLOY
@@ -41,19 +41,15 @@
 </p>
 </details>
 
-### ꜱᴜᴘᴘᴏʀᴛ ᴀɴᴅ ᴜᴘᴅᴀᴛᴇꜱ🎑
-
-<a href="https://t.me/tmmainchannel"><img src="https://img.shields.io/badge/Join-Main%20Channel-green.svg?style=for-the-badge&logo=Telegram">
-<a href="https://t.me/technomindzchat"><img src="https://img.shields.io/badge/Join-Support%20Group-blue.svg?style=for-the-badge&logo=Telegram">
-
   
 ### Required Variables
+  
 * `BOT_TOKEN`: Create a bot using [@BotFather](https://telegram.dog/BotFather), and get the Telegram API token.
-* `API_ID`: Get this value from [telegram.org](https://my.telegram.org/apps)
-* `API_HASH`: Get this value from [telegram.org](https://my.telegram.org/apps)
-* `CHANNELS`: Username or ID of channel or group. Separate multiple IDs by space
+* `API_ID`: Get this value from [@MT_MyTelegramOrg_Bot](https://t.me/MT_MyTelegramOrg_Bot)
+* `API_HASH`: Get this value from [@MT_MyTelegramOrg_Bot](https://t.me/MT_MyTelegramOrg_Bot)
+* `CHANNELS`: Username or ID of channel or group. Separate multiple IDs by space (Database Channel)
 * `ADMINS`: Username or ID of Admin. Separate multiple Admins by space
-* `DATABASE_URI`: [mongoDB](https://www.mongodb.com) URI. Get this value from [mongoDB](https://www.mongodb.com). For more help watch this [video](https://youtu.be/1G1XwEOnxxo)
+* `DATABASE_URI`: [mongoDB](https://www.mongodb.com) URI. Get this value from [mongoDB](https://www.mongodb.com). For more help watch this [Video](https://youtu.be/CWObOvzp09g)
 * `DATABASE_NAME`: Name of the database in MongoDb Cluster0
 * `LOG_CHANNEL` : A channel to log the activities of bot. Make sure bot is an admin in the channel.
   
@@ -92,6 +88,13 @@
 MADE BY @TmMainChannel
   
 ```
+
+
+### ꜱᴜᴘᴘᴏʀᴛ ᴀɴᴅ ᴜᴘᴅᴀᴛᴇꜱ🎑
+
+<a href="https://t.me/tmmainchannel"><img src="https://img.shields.io/badge/Join-Main%20Channel-green.svg?style=for-the-badge&logo=Telegram">
+<a href="https://t.me/technomindzchat"><img src="https://img.shields.io/badge/Join-Support%20Group-blue.svg?style=for-the-badge&logo=Telegram">
+  
 ## CREATED BY
  
 * [꧁𓊈𒆜🆁🅰🆅🅸🅽🅰🅽🅳🅰🅽𒆜𓊉꧂](https://t.me/TechnoMINDZYT)
