@@ -68,7 +68,7 @@ async def answer(bot, query):
         results.append(
             InlineQueryResultCachedDocument(
                 title=file.file_name,
-                file_id=file.file_id,
+                document_file_id=file.file_id,
                 caption=f_caption,
                 description=f'Size: {get_size(file.file_size)}\nType: {file.file_type}',
                 reply_markup=reply_markup))
@@ -103,11 +103,10 @@ async def answer(bot, query):
 def get_reply_markup(query):
     buttons = [
         [
-            InlineKeyboardButton('Search again', switch_inline_query_current_chat=query)
+            InlineKeyboardButton('📢Search again', switch_inline_query_current_chat=query)
         ]
         ]
     return InlineKeyboardMarkup(buttons)
-
 
 
 
