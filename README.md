@@ -1,6 +1,6 @@
 # <h2 align="centre"><i><b>💖TECHNO MINDZ BOT-1💝</i></b></h2>
 
-### COMMAN BOT FOR ALL MY TECHNOMINDZ SUBSCRIBERS With Pm Feature and settings Working One
+### <b>COMMAN BOT FOR ALL MY TECHNOMINDZ SUBSCRIBERS With Pm Feature and 4GB Files Supporting Working One</b>
 
 <p align="center"><a href="https://t.me/technomindzchat"><img src="https://telegra.ph/file/b417bdd01331179d5787c.jpg" width="500"></a></p>
 
@@ -15,6 +15,8 @@
 <a href="https://youtu.be/CWObOvzp09g">
   <img src="https://img.shields.io/badge/MongoDB-red?logo=youtube" width="150">
 
+<a href="https://youtu.be/mWWxKxNP8ls">
+  <img src="https://img.shields.io/badge/Tutorial-red?logo=youtube" width="140">
 
 # DEPLOY
 
@@ -40,6 +42,10 @@
 </a>
 </p>
 </details>
+
+### Note
+ - If You Need To Deploy YOur Own Bot 
+ - Contact [<b>@TechnoMindzYt</b>](https://t.me/technomindzyt) Paid One !
 
 
 ### Required Variables
@@ -80,7 +86,7 @@
 • /ban  - to ban a user.
 • /unban  - to unban a user.
 • /channel - to get list of total connected channels
-• /broadcast - to broadcast a message to all Eva Maria users
+• /broadcast - to broadcast a message to all Techno Mindz users
 ```
 ## CUSTOM FILE CAPTION
 ```
@@ -102,5 +108,6 @@ MADE BY @TmMainChannel
 
 ## Thanks to 
 
+ - [EvaMaria](https://github.com/EvamariaTG/EvaMaria)
  - Thanks To [꧁𓊈𒆜🆁🅰🆅🅸🅽🅰🅽🅳🅰🅽𒆜𓊉꧂](https://github.com/TechnoMindz) for Their Awesome [Unlimited Filter Bot](https://github.com/TechnoMindz/CommonBot_For_All) And [AutoFilterBoT](https://github.com/TechnoMindz/CommonBot_For_All)
  - Thanks To All Of My Subscribers😊
