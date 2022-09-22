@@ -1,14 +1,14 @@
-# Kanged From @TechnoMindz Made By Ravinandan @TechnoMindzyt
+# Kanged From @TechnoMindz
 import asyncio
 import re
 import ast
-import math
+
 from pyrogram.errors.exceptions.bad_request_400 import MediaEmpty, PhotoInvalidDimensions, WebpageMediaEmpty
 from Script import script
 import pyrogram
 from database.connections_mdb import active_connection, all_connections, delete_connection, if_active, make_active, \
     make_inactive
-from info import ADMINS, AUTH_CHANNEL, AUTH_USERS, CUSTOM_FILE_CAPTION, AUTH_GROUPS, P_TTI_SHOW_OFF, IMDB, \
+from info import ADMINS, DELETE_TIME, AUTH_CHANNEL, AUTH_USERS, CUSTOM_FILE_CAPTION, AUTH_GROUPS, P_TTI_SHOW_OFF, IMDB, \
     SINGLE_BUTTON, SPELL_CHECK_REPLY, IMDB_TEMPLATE
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery
 from pyrogram import Client, filters, enums
@@ -349,6 +349,15 @@ async def cb_handler(client: Client, query: CallbackQuery):
             f_caption = f_caption
         if f_caption is None:
             f_caption = f"{files.file_name}"
+        buttons = [
+            [
+                InlineKeyboardButton('𓂀𝕄𝕆𝕍𝕀𝔼𝕊𓂀', url='https://t.me/technomoviescollection'),
+                InlineKeyboardButton('彡[ᴍᴀɪɴ ᴄʜᴀɴɴᴇʟ]彡', url='https://t.me/tmmainchannel')
+            ],
+            [
+                InlineKeyboardButton('🤖𓂀ℍ𝕆𝕎 𝕋𝕆 𝔻𝕆𝕎ℕ𝕃𝕆𝔸𝔻𓂀🤖', url=f'https://t.me/tmmainchannel/4')
+            ]
+            ]
 
         try:
             if AUTH_CHANNEL and not await is_subscribed(client, query):
@@ -393,6 +402,15 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 f_caption = f_caption
         if f_caption is None:
             f_caption = f"{title}"
+        buttons = [
+            [
+                InlineKeyboardButton('𓂀𝕄𝕆𝕍𝕀𝔼𝕊𓂀', url='https://t.me/technomoviescollection'),
+                InlineKeyboardButton('彡[ᴍᴀɪɴ ᴄʜᴀɴɴᴇʟ]彡', url='https://t.me/tmmainchannel')
+            ],
+            [
+                InlineKeyboardButton('🤖𓂀 ℍ𝕆𝕎 𝕋𝕆 𝔻𝕆𝕎ℕ𝕃𝕆𝔸𝔻 𓂀🤖', url=f'https://t.me/tmmainchannel/4')
+            ]
+            ]
         await query.answer()
         await client.send_cached_media(
             chat_id=query.from_user.id,
@@ -404,13 +422,22 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await query.answer()
     elif query.data == "start":
         buttons = [[
-            InlineKeyboardButton('➕ Add Me To Your Groups ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
-        ], [
-            InlineKeyboardButton('🔍 Search', switch_inline_query_current_chat=''),
-            InlineKeyboardButton('🤖 Updates', url='https://t.me/TmMainChannel')
-        ], [
-            InlineKeyboardButton('ℹ️ Help', callback_data='help'),
-            InlineKeyboardButton('😊 About', callback_data='about')
+            InlineKeyboardButton('𐂷𐤠ƊƊ 𐒄Ƹ ƬⰙ ƳⰙꓴⱤ ƓⱤⰙꓴꝒ𐂷', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+            ],[
+            InlineKeyboardButton('📢 𝐉𝐨𝐢𝐧 𝐌𝐚𝐢𝐧 𝐂𝐡𝐚𝐧𝐧𝐞𝐥', url='https://t.me/TmMainChannel')
+            ],[
+            InlineKeyboardButton('♥ﮩ٨ـﮩ му♡gяσυρ ﮩـ٨ﮩ♥', url='https://t.me/technomoviescollection')
+            ],[
+            InlineKeyboardButton('🆘 𝐒𝐔𝐔𝐏𝐎𝐑𝐓', url='https://t.me/Technomindzchat'),
+            InlineKeyboardButton('sᴇᴀʀᴄʜ🔎', switch_inline_query_current_chat='')
+            ],[
+            InlineKeyboardButton('༺ 𝓓𝓔𝓥𝓔𝓛𝓞𝓟𝓔𝓡 ༻', url='https://t.me/TechnomindzYt'),
+            InlineKeyboardButton('𓂀 𝒮𝒪𝒰𝑅𝒞𝐸 𓂀', url='https://t.me/technomindzchat')
+            ],[      
+            InlineKeyboardButton('♻️ HΞLᎮ ♻️', callback_data='help'),
+            InlineKeyboardButton('♻️ ΛBOUT ♻️', callback_data='about')
+            ],[
+            InlineKeyboardButton('✅ SUBSCᏒIBΞ  ✅', url='https://www.youtube.com/c/TechnoMindz')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         r=await query.message.reply_text('▣▣▢▢▢▢')
@@ -428,14 +455,17 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await query.answer('🏠Home...')
     elif query.data == "help":
         buttons = [[
-            InlineKeyboardButton('Manual Filter', callback_data='manuelfilter'),
-            InlineKeyboardButton('Auto Filter', callback_data='autofilter')
+            InlineKeyboardButton('𝙼𝙰𝙽𝚄𝙴𝙻 𝙵𝙸𝙻𝚃𝙴𝚁', callback_data='manuelfilter'),
+            InlineKeyboardButton('𝙰𝚄𝚃𝙾 𝙵𝙸𝙻𝚃𝙴𝚁', callback_data='autofilter')
         ], [
-            InlineKeyboardButton('Connection', callback_data='coct'),
-            InlineKeyboardButton('Extra Mods', callback_data='extra')
+            InlineKeyboardButton('𝙲𝙾𝙽𝙽𝙴𝙲𝚃𝙸𝙾𝙽𝚂', callback_data='coct'),
+            InlineKeyboardButton('𝙴𝚇𝚃𝚁𝙰', callback_data='extra')
         ], [
-            InlineKeyboardButton('🏠 Home', callback_data='start'),
-            InlineKeyboardButton('🔮 Status', callback_data='stats')
+            ],[
+            InlineKeyboardButton('𝙷𝙾𝚆 𝚃𝙾 𝙳𝙴𝙿𝙻𝙾𝚈..?', url='https://youtu.be/mWWxKxNP8ls'),
+            InlineKeyboardButton('🔮𝚂𝚃𝙰𝚃𝚄𝚂', callback_data='stats')
+            ],[
+            InlineKeyboardButton('⚚ 𝙱𝙰𝙲𝙺 ⚚', callback_data='start')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         r=await query.message.reply_text('▣▣▢▢▢▢')
@@ -453,11 +483,20 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "about":
         buttons = [[
-            InlineKeyboardButton('🤖 Updates', url='https://t.me/Technomindzchat'),
-            InlineKeyboardButton('♥️ Source', callback_data='source')
-        ], [
-            InlineKeyboardButton('🏠 Home', callback_data='start'),
-            InlineKeyboardButton('🔐 Close', callback_data='close_data')
+            InlineKeyboardButton('𐂷 𐤠ƊƊ 𐒄Ƹ ƬⰙ ƳⰙꓴⱤ ƓⱤⰙꓴꝒ 𐂷', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+            ],[
+            InlineKeyboardButton('📢 𝐉𝐨𝐢𝐧 𝐌𝐚𝐢𝐧 𝐂𝐡𝐚𝐧𝐧𝐞𝐥', url='https://t.me/TmMainChannel')
+            ],[
+            InlineKeyboardButton('♥ﮩ٨ـﮩ му♡gяσυρ ﮩـ٨ﮩ♥', url='https://t.me/technomoviescollection')
+            ],[
+            InlineKeyboardButton('🆘 𝐒𝐔𝐏𝐏𝐎𝐑𝐓', url='https://t.me/Technomindzchat'),
+            InlineKeyboardButton('sᴇᴀʀᴄʜ🔎', switch_inline_query_current_chat='')
+            ],[
+            InlineKeyboardButton('༺ 𝓓𝓔𝓥𝓔𝓛𝓞𝓟𝓔𝓡 ༻', url='https://t.me/TechnomindzYt'),
+            InlineKeyboardButton('𓂀 𝒮𝒪𝒰𝑅𝒞𝐸 𓂀', url='https://t.me/technomindzchat')
+            ],[
+            InlineKeyboardButton('🏠𝐇𝐎𝐌𝐄', callback_data='start'),
+            InlineKeyboardButton('❌𝙲𝙻𝙾𝚂𝙴❌', callback_data='close_data')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         r=await query.message.reply_text('▣▣▢▢▢▢')
@@ -803,22 +842,50 @@ async def auto_filter(client, msg, spoll=False):
             **locals()
         )
     else:
-        cap = f"🤖 Here Is The Result For Your Query {search} "
+        cap = f"<b>Hai 👋 {message.from_user.mention}</b> 😍\n\n<b>📁 Found ✨  Files For Your Query : {search} 👇</b> \n\nMade By @TmMainChannel"
     if imdb and imdb.get('poster'):
         try:
-            await message.reply_photo(photo=imdb.get('poster'), caption=cap[:1024],
+            ravi = await message.reply_photo(photo=imdb.get('poster'), caption=cap[:1024],
                                       reply_markup=InlineKeyboardMarkup(btn))
         except (MediaEmpty, PhotoInvalidDimensions, WebpageMediaEmpty):
             pic = imdb.get('poster')
             poster = pic.replace('.jpg', "._V1_UX360.jpg")
-            await message.reply_photo(photo=poster, caption=cap[:1024], reply_markup=InlineKeyboardMarkup(btn))
+            ravi = await message.reply_photo(photo=poster, caption=cap[:1024], reply_markup=InlineKeyboardMarkup(btn))
         except Exception as e:
             logger.exception(e)
-            await message.reply_text(cap, reply_markup=InlineKeyboardMarkup(btn))
+            ravi = await message.reply_text(cap, reply_markup=InlineKeyboardMarkup(btn))
+            await asyncio.sleep(DELETE_TIME)
+            await ravi.delete()
+            await client.send_video(
+                chat_id=message.chat.id,
+                video="https://telegra.ph/file/0cddf1c687a0dbc256313.mp4",
+                caption=f"⚙️ Fɪʟᴛᴇʀ Fᴏʀ <code>{search}</code> \nBʏ <spoiler>{message.from_user.mention}</spoiler> \nIs Now Cʟᴏꜱᴇᴅ 🗑️\n\n@TmMainChannel",
+                reply_to_message_id=message.message_id
+            )
+        except Exception as e:
+            logger.exception(e)
+            ravin = await message.reply_text(text=cap, disable_web_page_preview=True, reply_markup=InlineKeyboardMarkup(btn))
+            await asyncio.sleep(DELETE_TIME)
+            await ravin.delete()
+            await client.send_video(
+                chat_id=message.chat.id,
+                video="https://telegra.ph/file/0cddf1c687a0dbc256313.mp4",
+                caption=f"⚙️ Fɪʟᴛᴇʀ Fᴏʀ <code>{search}</code> \nBʏ <spoiler>{message.from_user.mention}</spoiler> \nIs Now Cʟᴏꜱᴇᴅ 🗑️\n\n@TmMainChannel",
+                reply_to_message_id=message.message_id
+            )
     else:
-        await message.reply_text(cap, reply_markup=InlineKeyboardMarkup(btn))
+        ravina = await message.reply_text(text=cap, disable_web_page_preview=True, reply_markup=InlineKeyboardMarkup(btn))
+        await asyncio.sleep(DELETE_TIME)
+        await ravina.delete()
+        await client.send_video(
+            chat_id=message.chat.id,
+            video="https://telegra.ph/file/0cddf1c687a0dbc256313.mp4",
+            caption=f"⚙️ Fɪʟᴛᴇʀ Fᴏʀ <code>{search}</code> \nBʏ <spoiler>{message.from_user.mention}</spoiler> \nIs Now Cʟᴏꜱᴇᴅ 🗑️\n\n@TmMainChannel",
+            reply_to_message_id=message.message_id
+        )
     if spoll:
         await msg.message.delete()
+
 
 
 async def advantage_spell_chok(msg):
@@ -830,8 +897,8 @@ async def advantage_spell_chok(msg):
     g_s += await search_gagala(msg.text)
     gs_parsed = []
     if not g_s:
-        k = await msg.reply("I couldn't find any movie in that name.")
-        await asyncio.sleep(8)
+        k = await msg.reply_video(video="https://telegra.ph//file/d90256b1575c7aaadccc5.mp4", caption="<b>Hey, 𝐒𝐨𝐫𝐫𝐲, 𝐍𝐨 𝐌𝐨𝐯𝐢𝐞/𝐒𝐞𝐫𝐢𝐞𝐬 𝐑𝐞𝐥𝐚𝐭𝐞𝐝 𝐓𝐨 𝐓𝐡𝐞 𝐆𝐢𝐯𝐞𝐧 𝐖𝐨𝐫𝐝 𝐖𝐚𝐬 𝐅𝐨𝐮𝐧𝐝 🥺</b>\n\n<b>𝙿𝚘𝚜𝚜𝚒𝚋𝚕𝚎 𝙲𝚊𝚞𝚜𝚎𝚜 : 🤔</b>\n\n<b>⭕️ 𝐍𝐨𝐭 𝐑𝐞𝐥𝐞𝐚𝐬𝐞𝐝 𝐘𝐞𝐭\n⭕️ 𝐈𝐧𝐜𝐨𝐫𝐫𝐞𝐜𝐭 𝐒𝐩𝐞𝐥𝐥𝐢𝐧𝐠\n⭕ 𝐍𝐨𝐭 𝐔𝐩𝐥𝐨𝐚𝐝𝐞𝐝 𝐁𝐲 𝐎𝐰𝐧𝐞𝐫\n\n<b>👉Contact To My Owner👇</b>\n\n<b>@TechnoKillerBot 🌴</b>")
+        await asyncio.sleep(20)
         await k.delete()
         return
     regex = re.compile(r".*(imdb|wikipedia).*", re.IGNORECASE)  # look for imdb / wiki results
@@ -859,9 +926,11 @@ async def advantage_spell_chok(msg):
     movielist += [(re.sub(r'(\-|\(|\)|_)', '', i, flags=re.IGNORECASE)).strip() for i in gs_parsed]
     movielist = list(dict.fromkeys(movielist))  # removing duplicates
     if not movielist:
-        k = await msg.reply("I couldn't find anything related to that. Check your spelling")
-        await asyncio.sleep(8)
+        one_button = InlineKeyboardMarkup([[InlineKeyboardButton("🥲 𝗢𝗪𝗡𝗘𝗥 🔥", url="https://t.me/TechnoKillerBot"), InlineKeyboardButton("🤕 𝗚𝗢𝗢𝗚𝗟𝗘 🤒", url="https://www.google.com/")]])
+        k = await msg.reply_video(video="https://telegra.ph//file/d90256b1575c7aaadccc5.mp4", caption="Hey, 𝐒𝐨𝐫𝐫𝐲, 𝐍𝐨 𝐌𝐨𝐯𝐢𝐞/𝐒𝐞𝐫𝐢𝐞𝐬 𝐑𝐞𝐥𝐚𝐭𝐞𝐝 𝐓𝐨 𝐓𝐡𝐞 𝐆𝐢𝐯𝐞𝐧 𝐖𝐨𝐫𝐝 𝐖𝐚𝐬 𝐅𝐨𝐮𝐧𝐝 🥺\n\n𝙿𝚘𝚜𝚜𝚒𝚋𝚕𝚎 𝙲𝚊𝚞𝚜𝚎𝚜 : 🤔\n\n⭕️ 𝐍𝐨𝐭 𝐑𝐞𝐥𝐞𝐚𝐬𝐞𝐝 𝐘𝐞𝐭\n⭕️ 𝐈𝐧𝐜𝐨𝐫𝐫𝐞𝐜𝐭 𝐒𝐩𝐞𝐥𝐥𝐢𝐧𝐠\n⭕ 𝐍𝐨𝐭 𝐔𝐩𝐥𝐨𝐚𝐝𝐞𝐝 𝐁𝐲 𝐎𝐰𝐧𝐞𝐫\n\n👉Contact To My Owner👇", reply_markup = one_button)
+        await asyncio.sleep(20)
         await k.delete()
+        await msg.delete()
         return
     SPELL_CHECK[msg.id] = movielist
     btn = [[
@@ -871,8 +940,11 @@ async def advantage_spell_chok(msg):
         )
     ] for k, movie in enumerate(movielist)]
     btn.append([InlineKeyboardButton(text="Close", callback_data=f'spolling#{user}#close_spellcheck')])
-    await msg.reply("I couldn't find anything related to that🥴\nDid you mean any one of these?🤔\nTry searching in google whether it is released in OTT",
-                    reply_markup=InlineKeyboardMarkup(btn))
+    one_button = InlineKeyboardMarkup([[InlineKeyboardButton("🥲 𝗢𝗪𝗡𝗘𝗥 🔥", url="https://t.me/TechnoKillerBot"), InlineKeyboardButton("🤕 𝗚𝗢𝗢𝗚𝗟𝗘 🤒", url="https://www.google.com/")]])
+    k = await msg.reply_video(video="https://telegra.ph//file/d90256b1575c7aaadccc5.mp4", caption="Hey, 𝐒𝐨𝐫𝐫𝐲, 𝐍𝐨 𝐌𝐨𝐯𝐢𝐞/𝐒𝐞𝐫𝐢𝐞𝐬 𝐑𝐞𝐥𝐚𝐭𝐞𝐝 𝐓𝐨 𝐓𝐡𝐞 𝐆𝐢𝐯𝐞𝐧 𝐖𝐨𝐫𝐝 𝐖𝐚𝐬 𝐅𝐨𝐮𝐧𝐝 🥺\n\n𝙿𝚘𝚜𝚜𝚒𝚋𝚕𝚎 𝙲𝚊𝚞𝚜𝚎𝚜 : 🤔\n\n⭕️ 𝐍𝐨𝐭 𝐑𝐞𝐥𝐞𝐚𝐬𝐞𝐝 𝐘𝐞𝐭\n⭕️ 𝐈𝐧𝐜𝐨𝐫𝐫𝐞𝐜𝐭 𝐒𝐩𝐞𝐥𝐥𝐢𝐧𝐠\n⭕ 𝐍𝐨𝐭 𝐔𝐩𝐥𝐨𝐚𝐝𝐞𝐝 𝐁𝐲 𝐎𝐰𝐧𝐞𝐫\n\n👉Contact To My Owner👇", reply_markup = one_button)
+    await asyncio.sleep(20)
+    await k.delete()
+    await msg.delete()
 
 
 async def manual_filters(client, message, text=False):
@@ -892,11 +964,7 @@ async def manual_filters(client, message, text=False):
                 try:
                     if fileid == "None":
                         if btn == "[]":
-                            await client.send_message(
-                                group_id, 
-                                reply_text, 
-                                disable_web_page_preview=True,
-                                reply_to_message_id=reply_id)
+                            await client.send_message(group_id, reply_text, disable_web_page_preview=True)
                         else:
                             button = eval(btn)
                             await client.send_message(
@@ -926,3 +994,5 @@ async def manual_filters(client, message, text=False):
                 break
     else:
         return False
+
+  #Techno Mindz
