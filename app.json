@@ -1,7 +1,6 @@
 {
     "name": "Techno Mindz Bot",
     "description": "When you going to send file on telegram channel this bot will save that in database, So you can search that easily in inline mode",
-    "logo": "https://telegra.ph/file/a2a1dac049b50dc7f8dfb.jpg",
     "stack": "container",
     "keywords": [
       "telegram",
@@ -83,11 +82,6 @@
             "required": false,
             "value": "enteranycaption"
         },
-        "UPSTREAM_REPO": {
-            "description": "Don't Change Or It Won't Work",
-            "required": true,
-            "value": "youreditedgithublink"
-        },
         "DATABASE_URI": {
             "description": "mongoDB URI. Get this value from https://www.mongodb.com. For more help watch this video - https://youtu.be/dsuTn4qV2GA",
             "required": true,
@@ -111,7 +105,7 @@
         "IMDB": {
             "description": "Imdb, the view of information when making True/False ",
             "required": false,
-            "value": "False"
+            "value": "True"
         },
         "SINGLE_BUTTON": {
             "description": "choose b/w single or double buttons https://github.com/EvamariaTG/EvaMaria/issues/22",
