@@ -1,4 +1,4 @@
-# <h2 align="centre"><i><b>💖TECHNO MINDZ BOT-1💝</i></b></h2>
+# <h2 align="centre"><i><b>💖TECHNO MINDZ BOT💝</i></b></h2>
 
 ### <b>COMMAN BOT FOR ALL MY TECHNOMINDZ SUBSCRIBERS With Pm Feature and 4GB Files Supporting Working One</b>
 
@@ -42,10 +42,6 @@
 </a>
 </p>
 </details>
-
-### Note
- - If You Need To Deploy YOur Own Bot 
- - Contact [<b>@TechnoMindzYt</b>](https://t.me/technomindzyt) Paid One !
 
 
 ### Required Variables
